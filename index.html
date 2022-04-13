@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- saved from url=(0052)https://getbootstrap.com/docs/5.1/examples/checkout/ -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
@@ -10,7 +10,7 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/checkout/">
 
-    
+
 
     <!-- Bootstrap core CSS -->
 <link href="./example_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -41,75 +41,28 @@
       }
     </style>
 
-    
+
     <!-- Custom styles for this template -->
     <link href="./example_files/form-validation.css" rel="stylesheet">
   </head>
   <body class="bg-light">
-    
+
 <div class="container">
   <main>
     <div class="py-5 text-center">
-      <img class="d-block mx-auto mb-4" src="./example_files/bootstrap-logo.svg" alt="" width="72" height="57">
-      <h2>Checkout form</h2>
-      <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+      <img class="d-block mx-auto mb-4" src="./example_files/boku-logo-176.svg" alt="" width="72" height="57">
+      <h2>order service form</h2>
+      <p class="lead">We aim to answer all requests within a week, but in periods of lower staffing this could be slightly longer. By applying for NBIS Support you also agree to our user agreement.</p>
     </div>
 
-    <div class="row g-5">
-      <div class="col-md-5 col-lg-4 order-md-last">
-        <h4 class="d-flex justify-content-between align-items-center mb-3">
-          <span class="text-primary">Your cart</span>
-          <span class="badge bg-primary rounded-pill">3</span>
-        </h4>
-        <ul class="list-group mb-3">
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Product name</h6>
-              <small class="text-muted">Brief description</small>
-            </div>
-            <span class="text-muted">$12</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Second product</h6>
-              <small class="text-muted">Brief description</small>
-            </div>
-            <span class="text-muted">$8</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Third item</h6>
-              <small class="text-muted">Brief description</small>
-            </div>
-            <span class="text-muted">$5</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between bg-light">
-            <div class="text-success">
-              <h6 class="my-0">Promo code</h6>
-              <small>EXAMPLECODE</small>
-            </div>
-            <span class="text-success">−$5</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between">
-            <span>Total (USD)</span>
-            <strong>$20</strong>
-          </li>
-        </ul>
-
-        <form class="card p-2">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Promo code">
-            <button type="submit" class="btn btn-secondary">Redeem</button>
-          </div>
-        </form>
-      </div>
       <div class="col-md-7 col-lg-8">
-        <h4 class="mb-3">Billing address</h4>
-        <form class="needs-validation" novalidate="">
+        <h4 class="mb-3">BOKU-BINF Consultation Request Form</h4>
+        <form class="needs-validation" novalidate="" name="input" method="POST" action="https://formspree.io/binf@boku.ac.at">
+
           <div class="row g-3">
             <div class="col-sm-6">
               <label for="firstName" class="form-label">First name</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+              <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value="" required="">
               <div class="invalid-feedback">
                 Valid first name is required.
               </div>
@@ -117,37 +70,75 @@
 
             <div class="col-sm-6">
               <label for="lastName" class="form-label">Last name</label>
-              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+              <input type="text" class="form-control" id="lastName" name="LastName" placeholder="" value="" required="">
               <div class="invalid-feedback">
                 Valid last name is required.
               </div>
             </div>
 
-            <div class="col-12">
-              <label for="username" class="form-label">Username</label>
-              <div class="input-group has-validation">
-                <span class="input-group-text">@</span>
-                <input type="text" class="form-control" id="username" placeholder="Username" required="">
-              <div class="invalid-feedback">
-                  Your username is required.
-                </div>
-              </div>
-            </div>
 
             <div class="col-12">
               <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+              <input type="email" class="form-control" id="email" name="email-user" placeholder="you@example.com">
               <div class="invalid-feedback">
                 Please enter a valid email address for shipping updates.
               </div>
             </div>
 
+
+            <div class="col-12">
+              <label class="form-label">PI Name <span class="text-muted">(Optional)</span></label>
+              <input type="text" class="form-control" name="PIName">
+
+            </div>
+
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">Research Organization</label>
+              <select class="form-select" id="country" required="">
+                <option value="">Choose...</option>
+                <option>BOKU</option>
+                <option>TU WIEN</option>
+                <option>Others</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid research organization.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Funding <span class="text-muted">(Optional)</span></label>
+              <input type="text" class="form-control" name="Funding">
+
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Project Title <span class="text-muted">(Optional)</span></label>
+              <input type="text" class="form-control" name="ProjectTitle">
+
+            </div>
+
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">Field or Domain of Service</label>
+              <select class="form-select" id="country" required="">
+                <option value="">Choose...</option>
+                <option>Genomics</option>
+                <option>Epigenomics</option>
+                <option>Proteomics</option>
+                <option>Metabolomics</option>
+                <option>Others</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid Service Field.
+              </div>
+            </div>
+
+
             <div class="col-12">
               <label for="address" class="form-label">Address</label>
               <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
-              <div class="invalid-feedback">
-                Please enter your shipping address.
-              </div>
+
             </div>
 
             <div class="col-12">
@@ -155,106 +146,15 @@
               <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
             </div>
 
-            <div class="col-md-5">
-              <label for="country" class="form-label">Country</label>
-              <select class="form-select" id="country" required="">
-                <option value="">Choose...</option>
-                <option>United States</option>
-              </select>
-              <div class="invalid-feedback">
-                Please select a valid country.
-              </div>
+
+            <div class="col-12">
+              
+              <textarea name="message" placeholder="Describe your request here"></textarea>
             </div>
 
-            <div class="col-md-4">
-              <label for="state" class="form-label">State</label>
-              <select class="form-select" id="state" required="">
-                <option value="">Choose...</option>
-                <option>California</option>
-              </select>
-              <div class="invalid-feedback">
-                Please provide a valid state.
-              </div>
-            </div>
 
-            <div class="col-md-3">
-              <label for="zip" class="form-label">Zip</label>
-              <input type="text" class="form-control" id="zip" placeholder="" required="">
-              <div class="invalid-feedback">
-                Zip code required.
-              </div>
-            </div>
-          </div>
 
-          <hr class="my-4">
-
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="same-address">
-            <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
-          </div>
-
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="save-info">
-            <label class="form-check-label" for="save-info">Save this information for next time</label>
-          </div>
-
-          <hr class="my-4">
-
-          <h4 class="mb-3">Payment</h4>
-
-          <div class="my-3">
-            <div class="form-check">
-              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required="">
-              <label class="form-check-label" for="credit">Credit card</label>
-            </div>
-            <div class="form-check">
-              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required="">
-              <label class="form-check-label" for="debit">Debit card</label>
-            </div>
-            <div class="form-check">
-              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required="">
-              <label class="form-check-label" for="paypal">PayPal</label>
-            </div>
-          </div>
-
-          <div class="row gy-3">
-            <div class="col-md-6">
-              <label for="cc-name" class="form-label">Name on card</label>
-              <input type="text" class="form-control" id="cc-name" placeholder="" required="">
-              <small class="text-muted">Full name as displayed on card</small>
-              <div class="invalid-feedback">
-                Name on card is required
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <label for="cc-number" class="form-label">Credit card number</label>
-              <input type="text" class="form-control" id="cc-number" placeholder="" required="">
-              <div class="invalid-feedback">
-                Credit card number is required
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <label for="cc-expiration" class="form-label">Expiration</label>
-              <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
-              <div class="invalid-feedback">
-                Expiration date required
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <label for="cc-cvv" class="form-label">CVV</label>
-              <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
-              <div class="invalid-feedback">
-                Security code required
-              </div>
-            </div>
-          </div>
-
-          <hr class="my-4">
-
-          <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+          <button class="w-100 btn btn-primary btn-lg" type="submit">Submit</button>
         </form>
       </div>
     </div>
@@ -274,28 +174,24 @@
     <script src="./example_files/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
       <script src="./example_files/form-validation.js"></script>
-  
+
 
 </body><div style="display: none; opacity: 0; width: 0px; height: 0px;"><btn src="" id="pp-block-1" onclick="function hooker(script) {
     script.dataset.injected = &#39;true&#39;;
-
     /* Used for open window when request is allowed */
     let windowOpenRequestsCounter = 1;
     let windowOpenRequests = {};
     let nativeWindowOpen = window.open;
-
     hooker.windowOpen = e =&gt; {
         if (e.detail.wo_id) {
             nativeWindowOpen.apply(window,  windowOpenRequests[e.detail.wo_id]);
             delete windowOpenRequests[e.detail.wo_id];
         }
     };
-
     document.addEventListener(&#39;window_open&#39;, hooker.windowOpen);
     const post = (name, detail) =&gt; document.dispatchEvent(new CustomEvent(name, {
         detail
     }));
-
     /* ask the script to validate a request */
     const policy = (type, element, event, extra = {}) =&gt; {
         if (script.dataset.enabled === &#39;false&#39;) {
@@ -335,10 +231,8 @@
         }
     });
     const protectedWindows = new WeakMap(); // keep reference of all protected window objects
-
     /* blocker */
     const blocker = {};
-
     blocker.frame = target =&gt; {
         const {src, tagName} = target;
         if (src &amp;&amp; (tagName === &#39;IFRAME&#39; || tagName === &#39;FRAME&#39;)) {
@@ -351,7 +245,6 @@
             }
         }
     };
-
     blocker.onclick = e =&gt; {
         const a = e.target.closest(&#39;[target]&#39;) || e.target.closest(&#39;a&#39;);
         // if this is not a form or anchor element, ignore the click
@@ -361,14 +254,12 @@
         }
     };
     blocker.onclick.pointer = MouseEvent.prototype.preventDefault;
-
     blocker.install = (w = window) =&gt; {
         if (script.dataset.enabled === &#39;false&#39; || protectedWindows.has(w)) {
             return;
         }
         const d = w.document;
         protectedWindows.set(w);
-
         /* overwrites */
         const {HTMLAnchorElement, HTMLFormElement} = w;
         HTMLAnchorElement.prototype.click = new Proxy(HTMLAnchorElement.prototype.click, {
@@ -396,11 +287,9 @@
                 return block ? false : Reflect.apply(target, self, args);
             }
         });
-
         /* iframe mess */
         {
             const {HTMLIFrameElement, HTMLFrameElement} = w;
-
             const wf = Object.getOwnPropertyDescriptor(HTMLFrameElement.prototype, &#39;contentWindow&#39;);
             Object.defineProperty(HTMLFrameElement.prototype, &#39;contentWindow&#39;, {
                 configurable: true,
@@ -454,7 +343,6 @@
                 }
             });
         }
-
         /* iframe creation with innerHTML */
         {
             new MutationObserver(ms =&gt; {
@@ -468,10 +356,8 @@
                 }
             }).observe(d, {childList: true, subtree: true});
         }
-
         /* click */
         d.addEventListener(&#39;click&#39;, blocker.onclick, true); // with capture;
-
         /* window.open */
         w.open = new Proxy(w.open, {
             apply(target, self, args) {
@@ -496,7 +382,6 @@
                 return Reflect.apply(target, self, args);
             }
         });
-
         /* DOM replacement (document.open removes all the DOM listeners) */
         let dHTML = d.documentElement;
         d.write = new Proxy(d.write, {
@@ -516,10 +401,8 @@
             d.removeEventListener(&#39;click&#39;, blocker.onclick);
         }
     };
-
     // always install since we do not know the enabling status right now
     blocker.install();
-
     // receive configure
     new MutationObserver(() =&gt; {
         blocker[script.dataset.enabled === &#39;false&#39; ? &#39;remove&#39; : &#39;install&#39;]();
